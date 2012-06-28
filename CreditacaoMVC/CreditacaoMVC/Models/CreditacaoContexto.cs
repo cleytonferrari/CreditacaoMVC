@@ -30,6 +30,8 @@ namespace CreditacaoMVC.Models
         {
             //Remove os nomes das tabelas no Plural
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //So para funcionar no AppHb
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<CreditacaoContexto, Migrations.Configuration>());
         }
     }
 }
