@@ -1,0 +1,38 @@
+﻿@model CreditacaoMVC.Models.Aluno
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>Aluno</legend>
+    <div class="display-label">
+        Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="display-label">
+        Numero</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero)
+    </div>
+    <div class="display-label">
+        Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+    <div class="display-label">
+        Curso</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Curso.Nome)
+    </div>
+    <div class="display-label">
+        Login</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Autenticacao.Login)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlunoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

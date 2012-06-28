@@ -1,0 +1,65 @@
+﻿@model CreditacaoMVC.Models.Aluno
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>
+    Edit</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Aluno</legend>
+        @Html.HiddenFor(model => model.AlunoId)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Curso, "Curso")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Curso.CursoId")
+            @Html.ValidationMessageFor(model => model.Curso)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Numero)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero)
+            @Html.ValidationMessageFor(model => model.Numero)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        @Html.HiddenFor(model => model.Autenticacao.AutenticacaoId)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Autenticacao.Login)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Autenticacao.Login)
+            @Html.ValidationMessageFor(model => model.Autenticacao.Login)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Autenticacao.Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.Autenticacao.Password)
+            @Html.ValidationMessageFor(model => model.Autenticacao.Password)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

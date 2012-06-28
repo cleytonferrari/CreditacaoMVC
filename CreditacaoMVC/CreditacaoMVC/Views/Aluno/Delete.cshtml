@@ -1,0 +1,44 @@
+﻿@model CreditacaoMVC.Models.Aluno
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>
+    Delete</h2>
+<h3>
+    Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Aluno</legend>
+    <div class="display-label">
+        Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="display-label">
+        Numero</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero)
+    </div>
+    <div class="display-label">
+        Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+    <div class="display-label">
+        Curso</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Curso.Nome)
+    </div>
+    <div class="display-label">
+        Login</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Autenticacao.Login)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" />
+        |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

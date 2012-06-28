@@ -1,0 +1,33 @@
+﻿@model CreditacaoMVC.Models.UnidadeCurricular
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>UnidadeCurricular</legend>
+    <div class="display-label">
+        Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="display-label">
+        Ects</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ects)
+    </div>
+    <div class="display-label">
+        Descricao</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+    <div class="display-label">
+        Curso</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Curso.Nome)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UnidadeCurricularId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
