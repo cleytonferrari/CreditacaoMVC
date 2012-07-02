@@ -3,9 +3,9 @@
     ViewBag.Title = "Delete";
 }
 <h2>
-    Delete</h2>
+    Exluir</h2>
 <h3>
-    Are you sure you want to delete this?</h3>
+    Tem certeza que deseja excluir esta unidade curricular?</h3>
 <fieldset>
     <legend>UnidadeCurricular</legend>
     <div class="display-label">
@@ -32,8 +32,8 @@
 @using (Html.BeginForm())
 {
     <p>
-        <input type="submit" value="Delete" />
+        <input type="submit" value="Excluir" />
         |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Voltar", "Index")
     </p>
 }

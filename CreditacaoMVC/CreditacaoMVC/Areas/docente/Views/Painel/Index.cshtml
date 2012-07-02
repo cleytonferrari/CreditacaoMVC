@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Olá @Session["AlunoNome"], escolha uma das opções abaixo</h2>
+@Html.ActionLink("Reingresso", "Reingresso", "Painel") | @Html.ActionLink("Creditação", "Creditacao", "Painel")
+| @Html.ActionLink("Consulta", "Consulta", "Painel")

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<h2>
+    Login</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend>Login</legend>
+        <div class="editor-label">
+            @Html.Label("Login")
+        </div>
+        <div class="editor-field">
+            @Html.Editor("Login")
+        </div>
+        <div class="editor-label">
+            @Html.Label("Senha")
+        </div>
+        <div class="editor-field">
+            @Html.Password("Senha")
+        </div>
+        <p>
+            <input type="submit" value="Entrar" />
+        </p>
+    </fieldset>
+}

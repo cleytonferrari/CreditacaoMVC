@@ -19,6 +19,10 @@ namespace CreditacaoMVC.Models
         //Todas as classes que representam as tabelas do seu banco, devem ser inseridas aqui
         public DbSet<Aluno> Alunos { get; set; }
 
+        public DbSet<Docente> Docentes { get; set; }
+
+        public DbSet<Creditacao> Creditacao { get; set; }
+
         public DbSet<UnidadeCurricular> UnidadeCurricular { get; set; }
 
         public DbSet<Curso> Cursos { get; set; }

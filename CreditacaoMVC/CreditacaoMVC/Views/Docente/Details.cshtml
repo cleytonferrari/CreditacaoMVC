@@ -1,0 +1,40 @@
+﻿@model CreditacaoMVC.Models.Docente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Docente</legend>
+
+    <div class="display-label">Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Telefone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefone)
+    </div>
+
+    <div class="display-label">Coordenador</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Coordenador)
+    </div>
+
+    <div class="display-label">Administrador</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Administrador)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DocenteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

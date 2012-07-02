@@ -1,9 +1,9 @@
 ﻿@model CreditacaoMVC.Models.UnidadeCurricular
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes da Unidade Curricular";
 }
 <h2>
-    Details</h2>
+    Detalhes da Unidade Curricular</h2>
 <fieldset>
     <legend>UnidadeCurricular</legend>
     <div class="display-label">
@@ -28,6 +28,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UnidadeCurricularId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.UnidadeCurricularId }) |
+    @Html.ActionLink("Voltar", "Index")
 </p>

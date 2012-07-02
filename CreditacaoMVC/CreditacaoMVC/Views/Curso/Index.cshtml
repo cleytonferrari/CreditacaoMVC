@@ -1,33 +1,31 @@
 ﻿@model IEnumerable<CreditacaoMVC.Models.Curso>
-
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+<h2>
+    Listar Cursos</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastrar Novo Curso", "Create")
 </p>
 <table>
     <tr>
         <th>
             Nome
         </th>
-        <th></th>
+        <th>
+        </th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CursoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CursoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CursoId })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CursoId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CursoId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CursoId })
+            </td>
+        </tr>
+    }
 </table>

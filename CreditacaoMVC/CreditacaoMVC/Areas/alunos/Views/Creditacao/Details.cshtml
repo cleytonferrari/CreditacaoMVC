@@ -1,0 +1,47 @@
+﻿@model CreditacaoMVC.Models.Creditacao
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>Creditacao</legend>
+    <div class="display-label">
+        Curso</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Aluno.Curso.Nome)
+    </div>
+    <div class="display-label">
+        Cv</div>
+    <div class="display-field">
+        <a href="@Url.Content("~/Content/anexos/" + @Model.Cv)">Curriculo</a>
+    </div>
+    <div class="display-label">
+        AnexoA</div>
+    <div class="display-field">
+        <a href="@Url.Content("~/Content/anexos/" + @Model.AnexoA)">Anexo A</a>
+    </div>
+    <div class="display-label">
+        Comprovantes</div>
+    <div class="display-field">
+        <a href="@Url.Content("~/Content/anexos/" + @Model.Comprovantes)">Comprovantes</a>
+    </div>
+    <div class="display-label">
+        Parecer Do Juri</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParecerDoJuri)
+    </div>
+    <div class="display-label">
+        Parecer Do Coordenador</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParecerDoCoordenador)
+    </div>
+    <div class="display-label">
+        Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

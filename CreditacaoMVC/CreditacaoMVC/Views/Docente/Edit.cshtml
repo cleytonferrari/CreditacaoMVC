@@ -1,16 +1,17 @@
-﻿@model CreditacaoMVC.Models.Aluno
+﻿@model CreditacaoMVC.Models.Docente
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 <h2>
-    Cadastrar Aluno</h2>
+    Edit</h2>
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Aluno</legend>
+        <legend>Docente</legend>
+        @Html.HiddenFor(model => model.DocenteId)
         <div class="editor-label">
             @Html.LabelFor(model => model.Curso, "Curso")
         </div>
@@ -26,18 +27,32 @@
             @Html.ValidationMessageFor(model => model.Nome)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Numero)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Numero)
-            @Html.ValidationMessageFor(model => model.Numero)
-        </div>
-        <div class="editor-label">
             @Html.LabelFor(model => model.Email)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Coordenador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Coordenador)
+            @Html.ValidationMessageFor(model => model.Coordenador)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Administrador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Administrador)
+            @Html.ValidationMessageFor(model => model.Administrador)
         </div>
         @Html.HiddenFor(model => model.Autenticacao.AutenticacaoId)
         <div class="editor-label">
@@ -55,7 +70,7 @@
             @Html.ValidationMessageFor(model => model.Autenticacao.Password)
         </div>
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 }
